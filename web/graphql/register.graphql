@@ -1,0 +1,9 @@
+mutation Register($name: String!, $email: String!, $password: String!) {
+    register(registerDto: { name: $name, email: $email, password: $password }) {
+        ok
+        errors {
+            field
+            message
+        }
+    }
+}
